@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرة ذاتية لميس البيضاء</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/print.js/1.6.0/print.min.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #cbd5e0;
+        }
+        .dark-mode .bg-white {
+            background-color: #2d3748;
+        }
+        .dark-mode .text-gray-800 {
+            color: #cbd5e0;
+        }
+        .dark-mode .text-gray-600 {
+            color: #a0aec0;
+        }
+        .dark-mode .text-gray-700 {
+            color: #718096;
+        }
+        .dark-mode .text-indigo-600 {
+            color: #667eea;
+        }
+        .dark-mode .hover\:text-indigo-800:hover {
+            color: #5a67d8;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .section-border {
+            border: 2px solid;
+            border-image: linear-gradient(to right, #007bff, #0056b3, #d35400, #f39c12) 1;
+            animation: borderAnimation 3s infinite alternate;
+        }
+        @keyframes borderAnimation {
+            0% {
+                border-color: #007bff;
+            }
+            25% {
+                border-color: #0056b3;
+            }
+            50% {
+                border-color: #d35400;
+            }
+            75% {
+                border-color: #f39c12;
+            }
+            100% {
+                border-color: #007bff;
+            }
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .icon-container i {
+            font-size: 3rem;
+            color: #2980b9;
+            transition: color 0.3s ease;
+        }
+        .icon-container i:hover {
+            color: #feb47b;
+        }
+        .side-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .side-icons a, .side-icons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .side-icons a:hover, .side-icons button:hover {
+            background-color: #0056b3;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .print-section, .print-section * {
+                visibility: visible;
+            }
+            .print-section {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                font-family: 'Tajawal', sans-serif;
+                text-align: right; /* جعل النص يتجه نحو اليمين */
+                background-color: #ffffff; /* لون الخلفية */
+                color: #000000; /* لون النص */
+            }
+            .print-section {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #ffffff; /* لون الخلفية للقسم */
+                color: #000000; /* لون النص للقسم */
+                page-break-inside: avoid; /* منع تقسيم القسم داخل الصفحة */
+            }
+        }
+        .bg-white {
+            background-color: #ffffff;
+        }
+        .text-indigo-600 {
+            color: #2c3e50;
+        }
+        .text-gray-700 {
+            color: #34495e;
+        }
+        h1, h2, h3, p {
+            color: #2c3e50; /* أزرق داكن */
+        }
+        h2 {
+            color: #2980b9; /* أزرق فاتح */
+        }
+        h3 {
+            color: #d35400; /* برتقالي */
+        }
+        .text-gray-600 {
+            color: #7f8c8d; /* رمادي فاتح */
+        }
+        /* تغيير لون شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+        /* أيقونة الطباعة المتحركة */
+        .print-icon {
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        /* أيقونة الواتساب المتحركة */
+        .whatsapp-icon {
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        /* لون اسم لميس البيضاء في وضع الإضاءة */
+        .name-text {
+            color: #000000; /* أسود */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 transition-colors duration-300">
+
+    <div class="container mx-auto p-8 fade-in">
+        <button id="darkModeToggle" class="fixed top-4 right-4 p-2 bg-indigo-600 text-white rounded-full">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white shadow-lg rounded-lg p-8 section-border print-section">
+                <header class="text-center mb-8">
+                    <div class="icon-container">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold gradient-text name-text text-dark-900">لميس البيضه</h1>
+                    <p class="text-gray-600">متخصصة في الأشعة والترجمة الفورية</p>
+                </header>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-8 section-border print-section">
+                <section class="mb-8">
+                    <h2 class="text-2xl font-semibold text-indigo-600 mb-4">ملخص</h2>
+                    <p class="text-gray-700">أنا متخصصة في مجال الأشعة واستخدام جميع أنواع التصوير الطبي الرقمي مثل: وحدة الأشعة السادة، البانوراما، الثديية، والأشعة المقطعية. ومع ذلك، كانت شغفي دائمًا هي اللغات، ولهذا السبب حصلت على درجة الماجستير في الترجمة والترجمة الفورية من معهد الترجمة والترجمة الفورية العالي وحصلت على المركز الأول في فصلي.</p>
+                </section>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-8 section-border md:col-span-2 print-section">
+                <section class="mb-8">
+                    <div class="icon-container">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-indigo-600 mb-4">الخبرة العملية</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">فني أشعة في مستشفى "ممدوح أباظة"</h3>
+                            <p class="text-gray-600">2011 - الحالي</p>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>تقديم أفضل الخدمات لجميع المرضى من جميع الأعمار في أقسام المستشفى.</li>
+                                <li>مساعدة النساء من جميع الأعمار في اكتشاف أي علامات لسرطان الثدي.</li>
+                                <li>إعداد تقارير تشمل البيانات والمعلومات المذكورة وإرسالها إلى المدير العام.</li>
+                                <li>تسهيل عملية التواصل بين المرضى وأخصائي الأشعة.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">عضو مؤسس وعضو في مجلس الإدارة في جمعية فنيي التصوير الطبي السوريين</h3>
+                            <p class="text-gray-600">2017 - 2021</p>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>إعداد خطط مستقبلية لتحسين وضع فنيي الأشعة في جميع أنحاء سوريا.</li>
+                                <li>تنظيم فعاليات لتقديم أحدث تقنيات التصوير الطبي.</li>
+                                <li>تقديم دورات تدريبية لطلاب وخريجي المعاهد الطبية والصحية لإعدادهم للعمل في المستشفيات.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">مترجم ومترجم فوري مستقل</h3>
+                            <p class="text-gray-600">2021 - الحالي</p>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>التركيز على النصوص الاقتصادية والسياسية والتكنولوجية.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">مترجم فوري مستقل</h3>
+                            <p class="text-gray-600">2023 - الحالي</p>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>تقديم ترجمة فورية للمؤتمرات الشخصية أو الترجمة عبر الهاتف (OPI).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-8 section-border md:col-span-2 print-section">
+                <section class="mb-8">
+                    <div class="icon-container">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-indigo-600 mb-4">التعليم والتدريب</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">ماجستير في الترجمة الفورية والمتتالية</h3>
+                            <p class="text-gray-600">المعهد العالي للترجمة والترجمة الفورية، دمشق، سوريا - 2024</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">بكالوريوس في الترجمة</h3>
+                            <p class="text-gray-600">جامعة دمشق، دمشق، سوريا - 2020</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">دبلوم في الأشعة</h3>
+                            <p class="text-gray-600">المعهد الصحي، وزارة الصحة، دمشق، سوريا - 2010</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-8 section-border md:col-span-2 print-section">
+                <section class="mb-8">
+                    <div class="icon-container">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-indigo-600 mb-4">المهارات الشخصية</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">اللغات</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>العربية: لغة أم</li>
+                                <li>الإنجليزية: متقدمة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">المهارات الأساسية</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>مهارات التواصل: مهارات تواصل كتابية وشفهية ممتازة، وتواصل فعال مع الطلاب وأسرهم، والعملاء والزملاء، وتقديم معلومات واضحة ودقيقة وملاحظات للطلاب، وأسرهم، والشركات، والزملاء، وبناء شبكات طويلة الأمد.</li>
+                                <li>استخدام الحاسوب المهني.</li>
+                                <li>مهارات البحث الأكاديمي والتعليمي.</li>
+                                <li>استخدام برامج المكتب المهنية؛ "MC Office".</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">المهارات المتعلقة بالعمل</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                                <li>الكفاءة في كتابة وصياغة التقارير التي تلخص احتياجات ومصالح العملاء ومحاذاتها مع الأهداف المستهدفة للشركة.</li>
+                                <li>القدرة على وضع خطط يومية دقيقة ومحاذاتها مع المهام والاحتياجات اليومية للقسم.</li>
+                                <li>القدرة على التفكير بشكل نقدي وإبداعي لحل المشكلات المعقدة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-icons">
+        <button class="print-icon">
+            <i class="fas fa-print"></i>
+        </button>
+        <a href="https://wa.me/963992942483" target="_blank" class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector('.print-icon').addEventListener('click', function() {
+                const element = document.body; // التقاط المحتوى الكامل
+                const opt = {
+                    margin:       1,
+                    filename:     'cv.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2 },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                // تحويل المحتوى إلى PDF
+                html2pdf().from(element).set(opt).save();
+            });
+        };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+
+            darkModeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
